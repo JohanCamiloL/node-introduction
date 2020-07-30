@@ -9,18 +9,9 @@ const FILE_NAME = 'log.txt';
  * @param {String} data Data to be written on file.
  */
 const writeFile = (fileName, data) => {
-    fs.exists(fileName, (exists) => {
-        if (exists) {
-            fs.appendFile(fileName, data + '\n', (error) => {
-                if (error) console.log('Error en la escritura');
-                else console.log('Escritura realizada correctamente');
-            });
-        } else {
-            fs.writeFile(fileName, data + '\n', (error) => {
-                if (error) console.log('Error en la escritura');
-                else console.log('Escritura realizada correctamente');
-            });
-        }
+    fs.appendFile(fileName, data + '\n', (error) => {
+        if (error) console.log('Error en la escritura');
+        else console.log('Escritura realizada correctamente');
     });
 }
 
