@@ -22,4 +22,18 @@ const sub = (a, b) => a - b;
  */
 const mult = (a, b) => a * b;
 
-module.exports = { sum, sub, mult };
+/**
+ * Division within 2 numbers.
+ * @param {Number} a First number.
+ * @param {Number} b Second number.
+ * @returns Numbers division.
+ */
+const division = (a, b) => {
+    if (b === 0) {
+        return 0;
+    }
+
+    return a / b;
+};
+
+module.exports = { sum, sub, mult, division };
